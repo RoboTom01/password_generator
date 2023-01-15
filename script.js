@@ -1,4 +1,4 @@
-// Assignment code here
+// beginning values
 var charLower = "abcdefghijklmnopqrstuvwxyz";
 var charUpper = charLower.toLocaleUpperCase();
 var charNumber = "1234567890"
@@ -12,7 +12,7 @@ var length = "";
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-
+//password generater to use later defined prompts
 function generatePassword(charJoin) {
   
   for (var i = 0; i <= length; i++) {
@@ -38,14 +38,21 @@ function generatePassword(charJoin) {
 //Write password to the #password input
 function writePassword() {
   length = prompt("Please type in password length. (Numerical value from 8-128.)");
+  //checks to see if 'length' has a numeric value and stops function if not.
+    if (isNaN(length))
+    {
+    alert("Please enter a number value (example: 15).")
+    return null;
+    } 
+  //checks to make sure length is a number 8-128
     if (length < 8)
     {
-    alert("Please choose a number greater than 8.");
+    alert("Please choose a number equal to or greater than 8.");
     return null;
    }
     if (length > 128)
    {
-   alert("Please choose a number less than 128.")
+   alert("Please choose a number equal to or less than 128.")
     return null;
    }
   //lowercase selector
@@ -69,6 +76,13 @@ function writePassword() {
     charSelect.push(charSymbol)
    }
   
+  //if no character group is selected, function will stop with alert message.
+  if (selectLower, selectUpper, selectNumber, selectSymbol === false)
+  {
+    alert("Please select a character group to generate password from.")
+    return null;
+  }
+
   //join array into a string of values, remove spaces
   charJoin = charSelect.join(" ");
   charJoin = charJoin.replace(/\s+/g, '');
