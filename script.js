@@ -37,7 +37,7 @@ function generatePassword(charJoin) {
 //Password appears in box or alert
 //Write password to the #password input
 function writePassword() {
-  length = prompt("Please type in password length. (8-128 characters.)");
+  length = prompt("Please type in password length. (Numerical value from 8-128.)");
     if (length < 8)
     {
     alert("Please choose a number greater than 8.");
