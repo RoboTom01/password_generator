@@ -47,12 +47,12 @@ function writePassword() {
   //checks to make sure length is a number 8-128
     if (length < 8)
     {
-    alert("Please choose a number equal to or greater than 8.");
+    alert("Please choose a number between 8 - 128.");
     return null;
    }
     if (length > 128)
    {
-   alert("Please choose a number equal to or less than 128.")
+   alert("Please choose a number between 8 - 128.")
     return null;
    }
   //lowercase selector
