@@ -1,4 +1,4 @@
-# module_3
+# Random Password Generator
 Website for password generater.
 Website uses prompts to allow users to generate password based on:
   - Character Length
